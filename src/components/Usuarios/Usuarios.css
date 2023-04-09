@@ -1,0 +1,17 @@
+.container{
+    width: 50%;
+}
+
+h2{
+    text-align: center;
+}
+
+.btn-inicio{
+    display: flex;
+    
+}
+
+.btn-inicio button{
+    margin-left: 20px;
+    
+}

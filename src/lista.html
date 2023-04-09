@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .ticket {
+        background-color: rgb(233, 247, 157);
+        border: 1px solid #000;
+        width: 300px;
+        padding: 10px;
+      }
+      .ticket-header {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .ticket-body {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      .ticket-body p {
+        margin: 5px 0;
+      }
+      .ticket-footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ticket">
+      <div class="ticket-header">Bilhete</div>
+      <div class="ticket-body">
+        <p>Número da aposta: <span id="num-aposta"></span></p>
+        <p>Nome do apostador: <span id="nome-apostador"></span></p>
+        <p>Data da aposta: <span id="data-aposta"></span></p>
+        <p>Dezenas selecionadas: <span id="dezenas"></span></p>
+      </div>
+      <div class="ticket-footer">Boa sorte!</div>
+    </div>
+
+    <script>
+      // Exemplo de JSON retornado pela API
+      const apostas = {
+        "success": true,
+        "apostas": [
+          {
+            "id": 14,
+            "identificacao": "J1QkZ7KwK76y6Ws",
+            "apostador": "dcontrol",
+            "cidade": "Campina Grande",
+            "telefone": "(83)9.9331-7820",
+            "dezenas": "01,05,21,34,41,47,52,57,58,60",
+            "id_vendedor": 1,
+            "num_bolao": 1,
+            "data_aposta": "2023-03-29T19:26:44.354Z"
+          }
+        ]
+      };
+
+      // Seleciona o primeiro elemento do array de apostas
+      const aposta = apostas.apostas[0];
+
+      // Preenche as informações da aposta no HTML
+      document.getElementById("num-aposta").textContent = aposta.identificacao;
+      document.getElementById("nome-apostador").textContent = aposta.apostador;
+      document.getElementById("data-aposta").textContent = new Date(aposta.data_aposta).toLocaleDateString();
+      document.getElementById("dezenas").textContent = aposta.dezenas;
+    </script>
+  </body>
+</html>
+

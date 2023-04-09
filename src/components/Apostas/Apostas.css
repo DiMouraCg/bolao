@@ -1,0 +1,85 @@
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table th {
+  text-align: center;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+.mt-5{
+   display: flex;
+   flex-direction: column;
+}
+
+h1{
+    text-align: center;
+}
+
+h4{
+  text-align: center;
+}
+.numeros-container{
+    margin-left: 10%;
+}
+
+.escolha{
+  margin-left: 10%;
+}
+
+.btn-supresinha{
+  margin: 10px 10px 10px 10px;
+  background-color: darkgreen;
+
+}
+
+.btn-salvar{
+  margin-left: 30%;
+}
+
+.btn-salvar > button{
+  margin: 0px 10px 10px 10px;
+}
+
+.fa-solid{
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.container-fluid{
+ width: 70%;
+ margin-top: 10px;
+ 
+}
+
+.cidade-telefone{
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+#cidade{
+  width: 400px;
+}
+
+.circle {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(240, 245, 198);
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+}
+
+
